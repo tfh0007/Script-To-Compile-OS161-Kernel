@@ -10,11 +10,11 @@ If the os prevents execution of the script (autoCompileKernel) then permissions 
 
 To allow permissions you can use chmod
 For a regular user 
-$ chmod u+x autoCompileKernel
+# chmod u+x autoCompileKernel
 should be enough
 
 Once permissions are estabilished the script can easily be run with 
-$ ./autoCompileKernel [compile_location]
+# ./autoCompileKernel [compile_location]
 
 
 
