@@ -22,7 +22,7 @@ Lets assume this repository exists in the default Downloads folder:
 To run the script do
 
 
-$ ./~/Downloads/ScriptToCompileOS161Kernel/autoCompileKernel
+$ ~/Downloads/ScriptToCompileOS161Kernel/./autoCompileKernel
 
 
 
