@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
 DIRECTORY=${1?Error: An ASST# Compile location must be given. Example ./autoCompileKernel ASST0 }
-COMMITCHANGES=${2:-"I-edited-my-repository"}
-COMMITCHANGES2=${2:-"I-edited-my-repository"}
 
 
 if [ -d ~/cs161/src/kern/compile/$DIRECTORY ]; then
