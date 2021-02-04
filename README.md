@@ -18,11 +18,11 @@ Once permissions are estabilished the script can easily be run with
 
   $ ./autoCompileKernel [compile_location]
 
-Lets assume this repository exists in the default Downloads folder:
-To run the script do
+Lets assume this repository exists in the default Downloads folder and we want to compile ASST0:
+To run the script type:
 
 
-$ ~/Downloads/ScriptToCompileOS161Kernel/./autoCompileKernel
+$ ~/Downloads/ScriptToCompileOS161Kernel/./autoCompileKernel ASST0
 
 
 
