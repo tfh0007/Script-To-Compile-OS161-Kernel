@@ -10,13 +10,16 @@ If the os prevents execution of the script (autoCompileKernel) then permissions 
 
 To allow permissions you can use chmod
 For a regular user 
-# chmod u+x autoCompileKernel
-should be enough
+  $ chmod u+x autoCompileKernel
+
+should be good enough
 
 Once permissions are estabilished the script can easily be run with 
-# ./autoCompileKernel [compile_location]
+  $ ./autoCompileKernel [compile_location]
 
-
+Lets assume this repository exists in the default Downloads folder:
+To run the script type
+$ ./~/Downloads/ScriptToCompileOS161Kernel/autoCompileKernel
 
 
 
