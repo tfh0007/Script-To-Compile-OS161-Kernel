@@ -15,10 +15,13 @@ For a regular user
 should be good enough
 
 Once permissions are estabilished the script can easily be run with 
+
   $ ./autoCompileKernel [compile_location]
 
 Lets assume this repository exists in the default Downloads folder:
-To run the script type
+To run the script do
+
+
 $ ./~/Downloads/ScriptToCompileOS161Kernel/autoCompileKernel
 
 
