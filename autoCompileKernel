@@ -1,0 +1,99 @@
+#!/usr/bin/env bash
+
+DIRECTORY=${1?Error: An ASST# Compile location must be given. Example ./autoCompileKernel ASST0 }
+COMMITCHANGES=${2:-"I-edited-my-repository"}
+COMMITCHANGES2=${2:-"I-edited-my-repository"}
+
+
+if [ -d ~/cs161/src/kern/compile/$DIRECTORY ]; then
+
+  cd ~/cs161/src/kern/compile/$DIRECTORY
+
+  echo "Located Compile Location $DIRECTORY"
+  PS3="Please choose an action: "
+options=("Configure Source Code Tree and Build the $DIRECTORY Kernel" "Only Build the $DIRECTORY Kernel" "Cancel the Compile and Do Not Build Anything")
+
+select opt in "${options[@]}"
+do
+    case $opt in
+        "Configure Source Code Tree and Build the $DIRECTORY Kernel")
+            echo Configuring source code tree
+	    sleep 2
+	    
+	        cd ~/cs161/src
+	        ./configure
+		
+		cd ~/cs161/src/kern/conf
+		./config $DIRECTORY
+		echo Building the ASSTO kernel
+		sleep 2.5
+	   
+	        cd ../compile/$DIRECTORY
+		make depend
+		make
+		make install
+		echo Building the user level utilities
+		sleep 2.5
+		cd ~/cs161/src
+		make
+		echo Running the OS161 Utility
+		sleep 2.5
+		cd ~/cs161/root
+		clear
+                ./sys161 kernel 
+                break
+	  
+		
+		;;
+	
+        "Only Build the $DIRECTORY Kernel")
+
+	        echo Building the ASSTO kernel
+		sleep 2.5
+		
+	        cd ~/cs161/src/kern/conf
+                cd ../compile/$DIRECTORY
+		make depend
+		make
+		make install
+		echo Building the user level utilities
+		sleep 2.5
+		cd ~/cs161/src
+		make
+		echo Running the OS161 Utility
+		sleep 2.5
+                cd ~/cs161/root
+		clear
+                ./sys161 kernel 
+                break
+		
+            ;;
+      
+
+        "Cancel the Compile and Do Not Build Anything")
+	    echo "****quitting****"
+            echo "This script was created by Thomas Hansknecht"
+
+            break
+            ;;
+        *) echo "Invalid option. Please select any of the avaliable options $REPLY";;
+    esac
+done
+
+else
+    echo I was unable to find a $DIRECTORY compile directory
+    echo ****quitting****
+    
+fi;
+
+
+
+         
+
+
+
+
+
+ 
+
+
