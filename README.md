@@ -8,12 +8,11 @@ Typically the compile locations are ASST and then a number
 The script needs to be executed in a bash based window, such as terminal.
 If the os prevents execution of the script (autoCompileKernel) then permissions will need to be allowed
 
-To allow permissions you can use chmod
-For a regular user 
+To allow permissions you can use chmod. For a regular user: 
 
   $ chmod u+x autoCompileKernel
 
-should be good enough
+should be good enough.
 
 Once permissions are estabilished the script can easily be run with 
 
