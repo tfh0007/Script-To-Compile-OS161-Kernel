@@ -5,6 +5,6 @@
 
 # What was Learned
 - Learned how MakeFile can be used to efficently build and run packages
-- Preformed many tasks after a single event
-- Offered different options for building the OS/161 Kernel
+- Preformed many tasks after a single trigger
+- Offered different options for building the OS/161 Kernel with the help of MakeFile
 
